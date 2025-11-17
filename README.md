@@ -1,4 +1,4 @@
-## 🚀 PHP Image Upload Project with Nginx, PHP 8.3, RDS & Amazon S3
+# 🚀 PHP Image Upload Project with Nginx, PHP 8.3, RDS & Amazon S3
 
 A complete production‑ready guide to deploy a PHP + Nginx + MySQL application on an Ubuntu EC2 server, featuring:
 
@@ -9,7 +9,7 @@ A complete production‑ready guide to deploy a PHP + Nginx + MySQL application 
 🐬 RDS MySQL (php8.3-mysql)
 📦 nginx + php8.3-fpm
 
-# 📌 1. 🔧 Install Required Packages (Ubuntu Server)
+## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
 ```
 sudo apt update -y
 sudo apt upgrade -y
@@ -18,7 +18,7 @@ sudo apt install php8.3 php8.3-fpm php8.3-mysql -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
-# 📌 2. 🗃️ Install & Configure MariaDB / MySQL
+## 📌 2. 🗃️ Install & Configure MariaDB / MySQL
 ```
 sudo apt install mariadb-server -y
 sudo systemctl start mariadb
@@ -36,7 +36,7 @@ CREATE TABLE posts (
   url VARCHAR(500)
 );
 ```
-# 📌 3. 🌐 Configure Nginx for PHP
+## 📌 3. 🌐 Configure Nginx for PHP
 ```
 Edit Nginx config:
 sudo nano /etc/nginx/sites-available/default
@@ -57,7 +57,7 @@ Restart nginx:
 ```
 sudo systemctl restart nginx
 ```
-# 📌 4. 📁 Create Project Structure
+## 📌 4. 📁 Create Project Structure
 ```
 /var/www/html/
  ├── form.html
@@ -69,14 +69,14 @@ Create uploads directory:
 sudo mkdir /var/www/html/uploads
 sudo chmod 777 /var/www/html/uploads
 ```
-# 📌 5. 📦 Install Composer & AWS SDK for PHP
+## 📌 5. 📦 Install Composer & AWS SDK for PHP
 ```
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/local/bin/composer
 sudo ln -s /usr/local/bin/composer /usr/bin/composer
 sudo composer require aws/aws-sdk-php
 ```
-# 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role)
+## 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role)
 ```
 Instead of creating an IAM User and storing Access Keys, use an IAM Role attached directly to the EC2 instance.
 ```
@@ -99,7 +99,7 @@ Click Actions → Security → Modify IAM Role
 Select EC2-S3-Access-Role
 Save
 ```
-# 📌 7. Create files: 
+## 📌 7. Create files: 
 
 1) 📝 form.html,
 2) 🧩 upload.php
@@ -107,7 +107,7 @@ Save
 sudo nano form.html
 sudo nano upload.php
 ```
-# 📌 8. 🧪 Test Your Application:
+## 📌 8. 🧪 Test Your Application:
 ```
 Open browser:
 http://YOUR-EC2-PUBLIC-IP/form.html
@@ -132,5 +132,5 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 
 ## 👨‍💻 Author
 
-# Prasad 
+## Prasad 
 Cloud & DevOps Engineer
