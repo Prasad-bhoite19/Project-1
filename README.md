@@ -49,7 +49,7 @@ User -> Nginx -> PHP 8.3 -> RDS (MySQL)
 
 ~~~
 ## 🛠️ Technologies Used
-~~~
+
 
 AWS (EC2, S3, RDS, IAM, VPC)
 
@@ -62,9 +62,10 @@ MySQL
 Ubuntu Linux
 
 Composer + AWS SDK
-~~~
+
+-----
 ## 🧰 Prerequisites
-~~~
+
 AWS Account
 
 EC2 Ubuntu Instance
@@ -78,7 +79,7 @@ S3 Bucket
 PHP 8.3 + Extensions
 
 Composer
-~~~
+
 -----
 ## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
 ```
@@ -153,11 +154,11 @@ sudo composer require aws/aws-sdk-php
 ```
 -----
 ## 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role)
-```
+
 Instead of creating an IAM User and storing Access Keys, use an IAM Role attached directly to the EC2 instance.
-```
-✅ Step 1: Create IAM Role
-```
+
+## ✅ Step 1: Create IAM Role
+
 Go to AWS Console → IAM → Roles
 Click Create Role
 Select AWS service → Choose EC2
@@ -166,15 +167,15 @@ AmazonS3FullAccess (or least‑privilege policy for specific bucket)
 Name the role:
 EC2-S3-Access-Role
 Create the role.
-```
-✅ Step 2: Attach IAM Role to EC2 Instance
-```
+
+## ✅ Step 2: Attach IAM Role to EC2 Instance
+
 Go to EC2 → Instances
 Select your instance
 Click Actions → Security → Modify IAM Role
 Select EC2-S3-Access-Role
 Save
-```
+
 -----
 ## 📌 7. Create files and Add Code: 
 
@@ -187,7 +188,7 @@ sudo nano upload.php
 ```
 -----
 ## 📌 8. 🧪 Test Your Application:
-```
+
 Open browser:
 http://YOUR-EC2-PUBLIC-IP/form.html
 Try uploading an image.
@@ -195,15 +196,16 @@ Your file should:
 save temporarily inside EC2 uploads/
 upload to Amazon S3 bucket
 save name + image URL into RDS MySQL
-```
+
 -----
 
 🎉 DONE!
 
 You now have a professional, production-ready PHP + Nginx + S3 upload application running on AWS EC2.
 
+-----
 ## 🌥️ AWS Deployment Guide
-~~~
+
 Launch EC2
 
 Install PHP, Nginx, Composer
@@ -215,11 +217,11 @@ Attach IAM Role
 Deploy files
 
 Restart services
-~~~
+
 -----
 
 🔐 Security Best Practices
-~~~
+
 Use IAM Roles instead of access keys
 
 Restrict Security Groups
@@ -227,9 +229,10 @@ Restrict Security Groups
 Use HTTPS with Certbot
 
 Disable public RDS access
-~~~
+
+-----
 📸 Recommended Screenshots to Include
-~~~
+
 1️⃣ AWS EC2
 
 2️⃣ Nginx & Server Setup
@@ -241,23 +244,24 @@ Disable public RDS access
 5️⃣ Application Output
 
 6️⃣ Project Structure
-~~~
+
+-----
 ## 🧪 Testing
-~~~
+
 Upload different file sizes
 
 Test invalid formats
 
 Test RDS connection failure
-~~~
+
+-----
 ## 🧹 Troubleshooting
-~~~
+
 404 error → Check Nginx root path
 
 RDS timeout → Check SG inbound rules
 
 S3 upload fail → Check IAM role permissions
-~~~
 
 -----
 ## 👨‍💻 Author
