@@ -190,14 +190,19 @@ sudo nano upload.php
 ## 📌 8. 🧪 Test Your Application:
 
 Open browser:
+
 http://YOUR-EC2-PUBLIC-IP/form.html
+
 Try uploading an image.
+
 Your file should:
+
 save temporarily inside EC2 uploads/
+
 upload to Amazon S3 bucket
+
 save name + image URL into RDS MySQL
 
------
 
 🎉 DONE!
 
@@ -220,7 +225,7 @@ Restart services
 
 -----
 
-🔐 Security Best Practices
+## 🔐 Security Best Practices
 
 Use IAM Roles instead of access keys
 
@@ -231,7 +236,7 @@ Use HTTPS with Certbot
 Disable public RDS access
 
 -----
-📸 Recommended Screenshots to Include
+## 📸 Recommended Screenshots to Include
 
 1️⃣ AWS EC2
 
