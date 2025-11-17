@@ -1,5 +1,6 @@
 # 🚀 PHP Image Upload Project with Nginx, PHP 8.3, RDS & Amazon S3
------
+
+
 📄 form.html for uploading images
 
 🧩 upload.php for saving files & metadata
@@ -133,6 +134,7 @@ save name + image URL into RDS MySQL
 🎉 DONE!
 
 You now have a professional, production-ready PHP + Nginx + S3 upload application running on AWS EC2.
+
 -----
 
 📸 Recommended Screenshots to Include
@@ -154,8 +156,6 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 
 ## Prasad 
 Cloud & DevOps Engineer
-
------
 
 ## 🤝 Connect With Me
 
