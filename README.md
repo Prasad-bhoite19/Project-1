@@ -11,6 +11,7 @@
 🐬 RDS MySQL (php8.3-mysql)
 
 📦 nginx + php8.3-fpm
+
 -----
 ## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
 ```
