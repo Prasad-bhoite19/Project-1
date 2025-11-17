@@ -159,33 +159,33 @@ Instead of creating an IAM User and storing Access Keys, use an IAM Role attache
 
 **✅ Step 1: Create IAM Role**
 
-Go to AWS Console → IAM → Roles
+➡️ Go to AWS Console → IAM → Roles
 
-Click Create Role
+➡️ Click Create Role
 
-Select AWS service → Choose EC2
+➡️ Select AWS service → Choose EC2
 
 Attach policy:
 
-AmazonS3FullAccess (or least‑privilege policy for specific bucket)
+➡️ AmazonS3FullAccess (or least‑privilege policy for specific bucket)
 
-Name the role:
+➡️ Name the role:
 
-EC2-S3-Access-Role
+➡️ EC2-S3-Access-Role
 
-Create the role.
+➡️ Create the role.
 
 **✅ Step 2: Attach IAM Role to EC2 Instance**
 
-Go to EC2 → Instances
+➡️ Go to EC2 → Instances
 
-Select your instance
+➡️ Select your instance
 
-Click Actions → Security → Modify IAM Role
+➡️ Click Actions → Security → Modify IAM Role
 
-Select EC2-S3-Access-Role
+➡️ Select EC2-S3-Access-Role
 
-Save
+➡️ Save
 
 
 ## 📌 7. Create files and Add Code: 
@@ -200,11 +200,11 @@ sudo nano upload.php
 
 ## 📌 8. 🧪 Test Your Application:
 
-Open browser:
+➡️ Open browser:
 
 http://YOUR-EC2-PUBLIC-IP/form.html
 
-Try uploading an image.
+➡️ Try uploading an image.
 
 Your file should:
 
