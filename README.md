@@ -1,12 +1,15 @@
 # 🚀 PHP Image Upload Project with Nginx, PHP 8.3, RDS & Amazon S3
-
-A complete production‑ready guide to deploy a PHP + Nginx + MySQL application on an Ubuntu EC2 server, featuring:
-
+-----
 📄 form.html for uploading images
+
 🧩 upload.php for saving files & metadata
+
 🗂️ Uploads folder in EC2 server
+
 ☁️ Image storage on Amazon S3 using AWS SDK for PHP
+
 🐬 RDS MySQL (php8.3-mysql)
+
 📦 nginx + php8.3-fpm
 
 ## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
