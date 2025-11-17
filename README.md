@@ -14,12 +14,12 @@ A fully production-ready Cloud & DevOps project demonstrating PHP 8.3, Nginx, My
 
 📦 nginx + php8.3-fpm
 
-------
+
 ## 📌 Project Overview
 
 This project uploads an image using a PHP form. The image is stored in Amazon S3, and metadata (name, filename, timestamp) is stored in Amazon RDS. Nginx is used as a web server on an Ubuntu EC2 instance.
 
------
+
 
 ## 🎯 Objectives / Goals
 
@@ -39,7 +39,7 @@ Practice real workflow
 
 Improve resume with a real Cloud project
 
------
+
 
 ## ⚙️ Architecture Diagram
 ~~~
@@ -63,7 +63,7 @@ Ubuntu Linux
 
 Composer + AWS SDK
 
------
+
 ## 🧰 Prerequisites
 
 AWS Account
@@ -80,7 +80,7 @@ PHP 8.3 + Extensions
 
 Composer
 
------
+
 ## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
 ```
 sudo apt update -y
@@ -90,7 +90,7 @@ sudo apt install php8.3 php8.3-fpm php8.3-mysql -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
------
+
 ## 📌 2. 🗃️ Install & Configure MariaDB / MySQL
 ```
 sudo apt install mariadb-server -y
@@ -109,7 +109,7 @@ CREATE TABLE posts (
   url VARCHAR(500)
 );
 ```
------
+
 ## 📌 3. 🌐 Configure Nginx for PHP
 ```
 Edit Nginx config:
@@ -131,7 +131,7 @@ Restart nginx:
 ```
 sudo systemctl restart nginx
 ```
------
+
 ## 📌 4. 📁 Create Project Structure
 ```
 /var/www/html/
@@ -144,7 +144,7 @@ Create uploads directory:
 sudo mkdir /var/www/html/uploads
 sudo chmod 777 /var/www/html/uploads
 ```
------
+
 ## 📌 5. 📦 Install Composer & AWS SDK for PHP
 ```
 sudo curl -sS https://getcomposer.org/installer | sudo php
@@ -152,7 +152,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo ln -s /usr/local/bin/composer /usr/bin/composer
 sudo composer require aws/aws-sdk-php
 ```
------
+
 ## 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role)
 
 Instead of creating an IAM User and storing Access Keys, use an IAM Role attached directly to the EC2 instance.
@@ -176,7 +176,7 @@ Click Actions → Security → Modify IAM Role
 Select EC2-S3-Access-Role
 Save
 
------
+
 ## 📌 7. Create files and Add Code: 
 
 1) 📝 form.html
@@ -186,7 +186,7 @@ Save
 sudo nano form.html
 sudo nano upload.php
 ```
------
+
 ## 📌 8. 🧪 Test Your Application:
 
 Open browser:
@@ -208,7 +208,7 @@ save name + image URL into RDS MySQL
 
 You now have a professional, production-ready PHP + Nginx + S3 upload application running on AWS EC2.
 
------
+
 ## 🌥️ AWS Deployment Guide
 
 Launch EC2
@@ -223,7 +223,7 @@ Deploy files
 
 Restart services
 
------
+
 
 ## 🔐 Security Best Practices
 
@@ -235,7 +235,7 @@ Use HTTPS with Certbot
 
 Disable public RDS access
 
------
+
 ## 📸 Recommended Screenshots to Include
 
 1️⃣ AWS EC2
@@ -250,7 +250,7 @@ Disable public RDS access
 
 6️⃣ Project Structure
 
------
+
 ## 🧪 Testing
 
 Upload different file sizes
@@ -259,7 +259,7 @@ Test invalid formats
 
 Test RDS connection failure
 
------
+
 ## 🧹 Troubleshooting
 
 404 error → Check Nginx root path
@@ -268,7 +268,7 @@ RDS timeout → Check SG inbound rules
 
 S3 upload fail → Check IAM role permissions
 
------
+
 ## 👨‍💻 Author
 
 ## Prasad 
