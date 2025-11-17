@@ -157,23 +157,34 @@ sudo composer require aws/aws-sdk-php
 
 Instead of creating an IAM User and storing Access Keys, use an IAM Role attached directly to the EC2 instance.
 
-## ✅ Step 1: Create IAM Role
+**✅ Step 1: Create IAM Role**
 
 Go to AWS Console → IAM → Roles
+
 Click Create Role
+
 Select AWS service → Choose EC2
+
 Attach policy:
+
 AmazonS3FullAccess (or least‑privilege policy for specific bucket)
+
 Name the role:
+
 EC2-S3-Access-Role
+
 Create the role.
 
-## ✅ Step 2: Attach IAM Role to EC2 Instance
+**✅ Step 2: Attach IAM Role to EC2 Instance**
 
 Go to EC2 → Instances
+
 Select your instance
+
 Click Actions → Security → Modify IAM Role
+
 Select EC2-S3-Access-Role
+
 Save
 
 
