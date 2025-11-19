@@ -249,17 +249,12 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 
 ## 📸 Recommended Screenshots to Include
 
-1️⃣ AWS EC2
-
-2️⃣ Nginx & Server Setup
-
-3️⃣ RDS
-
-4️⃣ S3 Bucket
-
-5️⃣ Application Output
-
-6️⃣ Project Structure
+- 1️⃣ AWS EC2
+- 2️⃣ Nginx & Server Setup
+- 3️⃣ RDS
+- 4️⃣ S3 Bucket
+- 5️⃣ Application Output
+- 6️⃣ Project Structure
 
 
 ## 🧪 Testing
