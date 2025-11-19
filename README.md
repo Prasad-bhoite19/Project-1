@@ -15,13 +15,13 @@ A fully production-ready Cloud & DevOps project demonstrating PHP 8.3, Nginx, My
 📦 nginx + php8.3-fpm
 
 
-## 📌 Project Overview
+## 📌 Project Overview :-
 
 This project uploads an image using a PHP form. The image is stored in Amazon S3, and metadata (name, filename, timestamp) is stored in Amazon RDS. Nginx is used as a web server on an Ubuntu EC2 instance.
 
 
 
-## 🎯 Objectives / Goals
+## 🎯 Objectives :-
 
 ◆ Learn PHP 8.3 with Nginx
 
@@ -41,14 +41,14 @@ This project uploads an image using a PHP form. The image is stored in Amazon S3
 
 
 
-## ⚙️ Architecture Diagram
+## ⚙️ Architecture Diagram :-
 ~~~
 User -> Nginx -> PHP 8.3 -> RDS (MySQL)
                     \
                       -> S3 Bucket
 
 ~~~
-## 🛠️ Technologies Used
+## 🛠️ Technologies Used :-
 
 
 ◆ AWS (EC2, S3, RDS, IAM, VPC)
@@ -64,7 +64,7 @@ User -> Nginx -> PHP 8.3 -> RDS (MySQL)
 ◆ Composer + AWS SDK
 
 
-## 🧰 Prerequisites
+## 🧰 Prerequisites :-
 
 ◆ AWS Account
 
@@ -81,7 +81,7 @@ User -> Nginx -> PHP 8.3 -> RDS (MySQL)
 ◆ Composer
 
 
-## 📌 1. 🔧 Install Required Packages (Ubuntu Server)
+## 📌 1. 🔧 Install Required Packages (Ubuntu Server) :-
 ```
 sudo apt update -y
 sudo apt upgrade -y
@@ -91,13 +91,13 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
 
-## 📌 2. 🗃️ Install & Configure MariaDB / MySQL
+## 📌 2. 🗃️ Install & Configure MariaDB / MySQL :-
 ```
 sudo apt install mariadb-server -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 ```
-Create Database
+Create Database :-
 ```
 sudo mysql -u admin -p -h (Paste Your RDS endpoint here)
 CREATE DATABASE facebook;
@@ -110,12 +110,12 @@ CREATE TABLE posts (
 );
 ```
 
-## 📌 3. 🌐 Configure Nginx for PHP
+## 📌 3. 🌐 Configure Nginx for PHP :-
 ```
 Edit Nginx config:
 sudo nano /etc/nginx/sites-available/default
 ```
-Replace with:
+Replace with:-
 ```
 server {
     listen 80;
@@ -127,25 +127,25 @@ server {
     }
 
 ```
-Restart nginx:
+Restart nginx:-
 ```
 sudo systemctl restart nginx
 ```
 
-## 📌 4. 📁 Create Project Structure
+## 📌 4. 📁 Create Project Structure :-
 ```
 /var/www/html/
  ├── form.html
  ├── upload.php
  └── uploads/  (folder for temporary images)
 ```
-Create uploads directory:
+Create uploads directory:-
 ```
 sudo mkdir /var/www/html/uploads
 sudo chmod 777 /var/www/html/uploads
 ```
 
-## 📌 5. 📦 Install Composer & AWS SDK for PHP
+## 📌 5. 📦 Install Composer & AWS SDK for PHP :-
 ```
 sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/local/bin/composer
@@ -153,11 +153,11 @@ sudo ln -s /usr/local/bin/composer /usr/bin/composer
 sudo composer require aws/aws-sdk-php
 ```
 
-## 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role)
+## 📌 6. 🛠️ Configure AWS Credentials (Using IAM Role) :-
 
 Instead of creating an IAM User and storing Access Keys, use an IAM Role attached directly to the EC2 instance.
 
-**✅ Step 1: Create IAM Role**
+**✅ Step 1: Create IAM Role** :-
 
 ◆ Go to AWS Console → IAM → Roles
 
@@ -175,7 +175,7 @@ Attach policy:
 
 ◆ Create the role.
 
-**✅ Step 2: Attach IAM Role to EC2 Instance**
+**✅ Step 2: Attach IAM Role to EC2 Instance** :-
 
 ◆ Go to EC2 → Instances
 
@@ -188,7 +188,7 @@ Attach policy:
 ◆ Save
 
 
-## 📌 7. Create files and Add Code: 
+## 📌 7. Create files and Add Code :-
 
 1) 📝 form.html
 2) 🧩 upload.php
@@ -198,7 +198,7 @@ sudo nano form.html
 sudo nano upload.php
 ```
 
-## 📌 8. 🧪 Test Your Application:
+## 📌 8. 🧪 Test Your Application :-
 
 ◆ Open browser:
 
@@ -220,7 +220,7 @@ save name + image URL into RDS MySQL
 You now have a professional, production-ready PHP + Nginx + S3 upload application running on AWS EC2.
 
 
-## 🌥️ AWS Deployment Guide
+## 🌥️ AWS Deployment Guide :-
 
 ◆ Launch EC2
 
@@ -236,7 +236,7 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 
 
 
-## 🔐 Security Best Practices
+## 🔐 Security Best Practices :-
 
 ◆ Use IAM Roles instead of access keys
 
@@ -247,7 +247,7 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 ◆ Disable public RDS access
 
 
-## 📸 Recommended Screenshots to Include
+## 📸 Recommended Screenshots to Include :-
 
 - 1️⃣ AWS EC2
 - 2️⃣ Nginx & Server Setup
@@ -257,7 +257,7 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 - 6️⃣ Project Structure
 
 
-## 🧪 Testing
+## 🧪 Testing :-
 
 ◆ Upload different file sizes
 
@@ -266,7 +266,7 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 ◆ Test RDS connection failure
 
 
-## 🧹 Troubleshooting
+## 🧹 Troubleshooting :-
 
 ◆ 404 error → Check Nginx root path
 
@@ -275,7 +275,7 @@ You now have a professional, production-ready PHP + Nginx + S3 upload applicatio
 ◆ S3 upload fail → Check IAM role permissions
 
 
-## 👨‍💻 Author
+## 👨‍💻 Author :-
 
 ## Prasad 
 Cloud & DevOps 
